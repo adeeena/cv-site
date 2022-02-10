@@ -1,2 +1,1 @@
-# cv-page
-Source code for https://cv.pegazus.space .
+# Source code for the CV site of Muráncsik Adéna.
