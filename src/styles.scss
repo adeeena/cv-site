@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Raleway';
+  font-weight: bold;
+  src:  url('assets/fonts/Raleway/Raleway-Black.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src:  url('assets/fonts/Raleway/Raleway-Regular.woff') format('woff')
+}
+
+body, html {
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	overflow: hidden;
+}
+
+body {
+	 position: fixed; 
+     top: 0; left: 0; right: 0; bottom: 0;
+}
+
+
+.title {
+	font-size: 2rem;
+	font-weight: bold;
+	height: 10rem;
+	line-height: 10rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.container {
+	background: white;
+	height: 100%;
+	overflow: scroll;
+	width: 100%;
+
+	@media (max-width: 600px) {
+        padding-top: 3.5rem;
+    }
+
+	@media (min-width: 601px) {
+		padding-top: 5.5rem;
+	}
+}

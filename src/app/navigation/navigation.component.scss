@@ -1,0 +1,68 @@
+.container {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 1rem;
+	overflow: hidden;
+
+	&.black {
+		background: white;
+		padding-bottom: .5rem;
+	}
+
+	&.white {
+		background: transparent;
+	}
+
+	a {
+		display: inline-block;
+		font-family: 'Raleway', sans-serif;
+		font-size: .7rem;
+		margin: 0 .5rem;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:after {
+			border-bottom: solid 3px #3ad59f;
+			content: '';
+			display:block;
+			transform: scaleX(0);  
+			transition: transform 250ms ease-in-out;
+		}
+
+		&:hover:after {
+			transform: scaleX(1);
+		}
+
+		&.white {
+			color: white;
+		}
+
+		&.black {
+			color: black;
+		}
+
+		&.home {
+			border-width: 2px;
+			border-style: solid;
+			border-radius: 50%;
+			display: block;
+			height: 2rem;
+			font-size: 1.3rem;
+			line-height: 2rem;
+			padding: 1rem;
+			text-align: center;
+			width: 2rem;
+		}
+
+		&.white.home {
+			border-color: white;
+		}
+
+		&.black.home {
+			border-color: black;
+		}
+	}
+}

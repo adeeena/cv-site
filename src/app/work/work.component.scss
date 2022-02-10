@@ -1,0 +1,220 @@
+.container {
+	.work-experience {
+		.title {
+			height: inherit;
+			line-height: inherit;
+			margin-top: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		.download-section {
+			text-align: center;
+
+			a {
+				border: 1px solid black;
+				background: white;
+				color: black;
+				font-family: 'Raleway', sans-serif;
+				margin: 0 .5rem .5rem 0;
+				padding: .5rem;
+				text-decoration: none;
+			}
+
+			margin-bottom: 5rem;
+		}
+
+		.job {
+			&.white {
+				.work-item-details {
+					border-left-color: black;
+				}
+
+				.station-drawing {
+					background: white;
+					border: 5px solid black;
+				}
+
+				.horizontal-line {
+					background: black;
+				}
+			}
+
+			&.black {
+				background: black;
+				color: white;
+
+				.work-item {
+					.job-header, .period.normal {
+						padding-top: 2rem;
+					}
+				}
+
+				.work-item-details {
+					border-left-color: white;
+				}
+
+				.station-drawing {
+					background: black;
+					color: white;
+					border: 5px solid white;
+				}
+
+				.horizontal-line {
+					background: white;
+				}
+			}
+		}
+
+		.work-item {
+			display: flex;
+			@media (max-width: 600px) {
+		        flex-direction: column;
+		        margin: 0 1rem;
+		    }
+
+			.period {
+				@media (max-width: 600px) {
+			        .from, .to {
+			        	display: inline;
+			        }
+			    }
+
+				@media (min-width: 601px) {
+					margin-right: 1rem;
+					text-align: right;
+					width: 15%;
+				}
+
+				&.normal {
+					font-size: 1.3rem;
+					font-weight: bold;
+
+					.from {
+						line-height: 2.4rem;
+					}
+				}
+
+				&.small {
+					font-size: 1rem;
+
+					.from {
+						line-height: 1.4rem;
+					}
+				}
+			}
+
+			.work-item-details {
+				padding-bottom: 2rem;
+				
+				@media (min-width: 601px) {
+					border-left-width: .3rem;
+					border-left-style: solid;
+					margin-right: 3rem;
+					padding-left: 1rem;
+					width: 85%;
+				}
+
+				p {
+					margin-top: .1rem;
+				}
+
+				.job-project-team-role,
+					.job-project-team-size {
+						margin-top: .25rem;
+					}
+
+					.job-project-used-technologies {
+						display: flex;
+						justify-content: space-between;
+						margin-top: 1rem;
+						overflow: hidden;
+						position: relative;
+
+						@media (max-width: 600px) {
+							flex-direction: column;
+						}
+
+						.horizontal-line {
+							@media (min-width: 601px) {
+								position: absolute;
+								top: 3rem;
+								height: .3rem;
+								left: 3rem;
+								right: 3rem;
+							}
+						}
+					}
+
+					.item {
+						align-items: center;
+						display: flex;
+						z-index: 399;
+
+						@media (max-width: 600px) {
+							flex-direction: row;
+							margin-bottom: 1rem;
+						}
+
+						@media (min-width: 601px) {
+							flex-direction: column;
+						}
+
+						.station-title {
+							margin-bottom: .5rem;
+
+							@media (max-width: 600px) {
+								display: none;
+							}
+						}
+
+						.station-drawing {
+							border-radius: 50%;
+							font-size: 1.3rem;
+							height: 2.5rem;
+							line-height: 2.5rem;
+							text-align: center;
+							width: 2.5rem;
+
+							@media (max-width: 600px) {
+								align-self: flex-start;
+								order: 1;
+								margin-right: 1rem;
+							}
+						}
+
+						.station-description {
+							@media (max-width: 600px) {
+								align-self: flex-start;
+								order: 3;
+							}
+
+							@media (min-width: 601px) {
+								margin-top: .5rem;
+								text-align: center;
+							}
+						}
+
+						.line-drawing {
+							height: 2.5rem;
+						}
+					}
+			}
+
+			.job-header {
+				.job-title {
+					font-size: 1.7rem;
+					font-weight: bold;
+				}
+
+				.company-name {
+					font-size: 1.2rem;
+					font-style: italic;
+				}
+			}
+		}
+	}
+
+	.bottom {
+		height: 15rem;
+	}
+}

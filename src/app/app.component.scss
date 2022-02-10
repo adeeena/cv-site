@@ -1,0 +1,25 @@
+.main {
+	background: url('/assets/images/bg.jpg');
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+
+	.overlay {
+		background: rgba(0, 0, 0, .4);
+		height: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	app-navigation {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 400;
+	}
+}
