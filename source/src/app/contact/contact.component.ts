@@ -1,6 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, transition, useAnimation, state, style, animate } from "@angular/animations";
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Component } from '@angular/core';
+import { trigger, transition, useAnimation } from "@angular/animations";
+import {
+  faLinkedin,
+  faGithub,
+  faDribbble,
+  faScribd,
+  faStackOverflow,
+  faBlogger
+} from '@fortawesome/free-brands-svg-icons';
+import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 
 import {
   fadeIn,
@@ -26,4 +34,9 @@ import {
 export class ContactComponent {
   faLinkedin = faLinkedin;
   faGithub = faGithub;
+  faDribbble = faDribbble;
+  faScribd = faScribd;
+  faStackOverflow = faStackOverflow;
+  faBlogger = faBlogger;
+  faAddressCard = faAddressCard;
 }

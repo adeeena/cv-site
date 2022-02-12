@@ -24,8 +24,14 @@
 		text-decoration: none;
 		text-transform: uppercase;
 
+		&:not(.home) {
+			min-width: 10vw;
+		}
+
 		&:after {
-			border-bottom: solid 3px #3ad59f;
+			border-bottom-style: solid;
+			border-bottom-width: 3px;
+			border-bottom-color: #FFA082;
 			content: '';
 			display:block;
 			transform: scaleX(0);  
