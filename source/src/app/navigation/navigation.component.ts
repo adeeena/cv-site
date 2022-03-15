@@ -6,12 +6,9 @@ import { Router } from "@angular/router";
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
 
   constructor(private router:Router) {}
-
-  ngOnInit(): void {
-  }
 
   getRoute(): string {
 	  if (this.router.url === '/' || this.router.url === '/contact') {
