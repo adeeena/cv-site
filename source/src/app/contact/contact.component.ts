@@ -6,7 +6,8 @@ import {
   faDribbble,
   faScribd,
   faStackOverflow,
-  faBlogger
+  faBlogger,
+  faBehance
 } from '@fortawesome/free-brands-svg-icons';
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 
@@ -39,4 +40,5 @@ export class ContactComponent {
   faStackOverflow = faStackOverflow;
   faBlogger = faBlogger;
   faAddressCard = faAddressCard;
+  faBehance = faBehance;
 }
