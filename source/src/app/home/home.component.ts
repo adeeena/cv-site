@@ -14,10 +14,16 @@ export class HomeComponent {
       headline: "Full Stack Software Developer."
     },
     {
+      headline: "Voice Actor."
+    },
+    {
       headline: "Technology enthusiast.",
   	},
     {
       headline: "Design. Creativity. Innovation.",
+    },
+    {
+      headline: "Development Team Lead / Architect."
     },
   ];
 }
