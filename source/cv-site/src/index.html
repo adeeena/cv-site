@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Muráncsik Adéna</title>
+  <meta name="description" content="Muráncsik Adéna | Full Stack Software Developer, Development Team Lead / Architect, Voice Actor">
+  <meta name="keywords" content="Adena, Developer, CV">
+  <meta name="author" content="Muráncsik Adéna">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5VN046W9DD"></script>
   <script>
@@ -10,7 +13,9 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-5VN046W9DD');
+    gtag('config', 'G-5VN046W9DD', {
+      'page_path': location.pathname + location.hash
+    });
   </script>
 
   <base href="/">
