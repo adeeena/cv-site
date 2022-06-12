@@ -14,7 +14,7 @@ export class HomeComponent {
       headline: "Full Stack Software Developer."
     },
     {
-      headline: "Voice Actor."
+      headline: "Podcast Creator."
     },
     {
       headline: "Technology enthusiast.",
