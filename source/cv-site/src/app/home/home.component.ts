@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Slide } from "../carousel/carousel.interface";
 import { AnimationType } from "../carousel/carousel.animations";
 import { CarouselComponent } from "../carousel/carousel.component";
 
@@ -9,21 +8,12 @@ import { CarouselComponent } from "../carousel/carousel.component";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  slides: Slide[] = [
-    {
-      headline: "Full Stack Software Developer."
-    },
-    {
-      headline: "Podcast Creator."
-    },
-    {
-      headline: "Technology enthusiast.",
-  	},
-    {
-      headline: "Design. Creativity. Innovation.",
-    },
-    {
-      headline: "Development Team Lead / Architect."
-    },
+  slides: string[] = [
+      'Solutions Architect.',
+      'Development Team Lead.',
+      'Full Stack Software Developer.',
+      'Podcast Creator.',
+      'Technology enthusiast.',
+      'LGBT+ activist.'
   ];
 }

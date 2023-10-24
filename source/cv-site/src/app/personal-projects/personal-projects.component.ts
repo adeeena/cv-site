@@ -5,14 +5,9 @@ import {
   fadeOut
 } from "../carousel/carousel.animations";
 import {
-  faLinkedin,
   faGithub,
-  faDribbble,
-  faScribd,
-  faStackOverflow,
-  faBlogger
+  faInstagram
 } from '@fortawesome/free-brands-svg-icons';
-import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-personal-projects',
@@ -29,19 +24,9 @@ import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
     ])
   ]
 })
-export class PersonalProjectsComponent implements OnInit {
-  faLinkedin = faLinkedin;
+export class PersonalProjectsComponent {
   faGithub = faGithub;
-  faDribbble = faDribbble;
-  faScribd = faScribd;
-  faStackOverflow = faStackOverflow;
-  faBlogger = faBlogger;
-  faAddressCard = faAddressCard;
-
-
+  faInstagram = faInstagram;
+  
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

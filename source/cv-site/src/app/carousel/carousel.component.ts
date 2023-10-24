@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { Slide } from "./carousel.interface";
 import { trigger, transition, useAnimation, state, style, animate } from "@angular/animations";
 
 import {
@@ -23,7 +22,7 @@ import {
   ]
 })
 export class CarouselComponent implements OnInit {
-  @Input() slides: Slide[] = [];
+  @Input() slides: string[] = [];
 
   currentSlide = 0;
 
