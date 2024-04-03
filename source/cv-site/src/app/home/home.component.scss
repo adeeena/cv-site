@@ -1,11 +1,140 @@
 .content {
 	height: 100%;
+	margin: 6rem 0 4rem;
 
-	.grid-container {
-		align-items: center;
+	.pseudo {
+		color: rgba(255, 255, 255, .8);
+		letter-spacing: .125rem;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		font-weight: normal;
+		line-height: 3.5rem;
+		margin-top: 1rem;
+	}
+
+	.jump-links {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 100%;
+		font-size: 1.5rem;
+		gap: 1rem;
+		margin: 1rem 0;
+
+		a {
+			color: white;
+		}
+	}
+
+	.projects {
+		margin-top: 3rem;
+
+		.project-title {
+			color: rgba(255, 255, 255, .8);
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+
+		.project-grid {
+			display: grid;
+			gap: 1rem;
+			grid-template-columns: 1fr 1fr;
+
+			.block {
+				border: 1px solid rgba(255, 255, 255, .8);
+				border-radius: .5rem;
+				padding: 1rem;
+				transition: border ease .4s, background ease .4s;
+
+				&:hover {
+					background: rgba(255, 255, 255, .2);
+					border: 1px solid white;
+				}
+
+				.block-title {
+					font-weight: bold;
+					margin-bottom: .5rem;
+				}
+
+				.block-text {
+					color: rgba(255, 255, 255, .8);
+				}
+
+				.block-button {
+					background: rgba(255, 255, 255, .2);
+					border: white;
+					color: white;
+					display: inline-block;
+					font-weight: normal;
+					margin: 1rem 0 .5rem;
+					padding: .5rem;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.links {
+		background: rgba(255, 255, 255, .2);
+		backdrop-filter: blur(.5rem);
+		border: 1px solid rgba(255, 255, 255, .2);
+		border-radius: .5rem;
+		margin-top: 4rem;
+		padding: 2rem;
+		text-align: center;
+
+		.links-title {
+			font-size: 2rem;
+			margin-bottom: .5rem;
+		}
+
+		.links-subtitle {
+			margin-bottom: 2rem;
+		}
+
+		.links-grid {
+			display: grid;
+			gap: 1rem;
+			grid-template-columns: 1fr 1fr;
+			margin: auto;
+			width: 22rem;
+
+			a {
+				border: 1px solid transparent;
+				border-radius: .5rem;
+				color: rgba(255, 255, 255, .4);
+				display: flex;
+				padding: 1rem;
+				transition: background ease .3s, border ease .4s, color ease .8s;
+				width: 10rem;
+
+				fa-icon {
+					font-size: 1.8rem;
+				}
+
+				.link-header {
+					color: white;
+					display: flex;
+					flex-direction: column;
+					font-size: 1rem;
+					font-weight: 400;
+					margin-left: 1rem;
+					text-align: left;
+
+
+					.sub {
+						color: rgba(255, 255, 255, .8);
+						font-size: .8rem;
+					}
+				}
+
+				&:hover {
+					background: rgba(255, 255, 255, .1);
+					border: 1px solid white;
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }

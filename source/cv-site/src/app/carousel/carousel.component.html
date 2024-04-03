@@ -1,9 +1,0 @@
-<div class="carousel">
-  <ng-container *ngFor="let slide of slides; let i = index">
-    <div class="carousel-line"
-      *ngIf="i === currentSlide"
-      [@flyInOut]>
-      {{ slide.headline }}
-    </div>
-  </ng-container>
-</div>

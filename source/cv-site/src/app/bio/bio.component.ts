@@ -7,11 +7,11 @@ import {
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-bio',
+  templateUrl: './bio.component.html',
+  styleUrls: ['./bio.component.scss']
 })
-export class HomeComponent {
+export class BioComponent {
   faLinkedin = faLinkedin;
   faGithub = faGithub;
   faInstagram = faInstagram;

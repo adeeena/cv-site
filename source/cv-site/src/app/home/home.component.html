@@ -1,7 +1,149 @@
 <div class="content">
-	<div class="grid-container">
-		<div>
-			<carousel [slides]="slides"></carousel>
+	<div class="pseudo">
+		@adeeena
+	</div>
+	<h1>
+		Adéna Auróra Montefiori
+	</h1>
+
+	<div>
+		Welcome <span [innerHTML]="'👋' | utf8EmojisToImages:'apple':16"></span><br />
+		<br />
+		At the moment I am Solutions Architect at <a href="https://silversea.com" target="_blank">Silversea Monaco</a>.<br />
+		<br />
+		I’m currently improving my architectural application designing skills among with various web frontend framework technologies.<br />
+		<br />
+		In my free time I like experimenting and trying different forms of art as well as creating digital content of any kind.<br />
+		<br />
+		<a [routerLink]="'/bio'">Learn more.</a>
+	</div>
+
+	<div class="jump-links">
+		<a href="https://github.com/adeeena" target="_blank">
+			<fa-icon [icon]="faGithub"></fa-icon>
+		</a>
+
+		<a href="https://linkedin.com/in/adeeena" target="_blank">
+			<fa-icon [icon]="faLinkedin"></fa-icon>
+		</a>
+
+		<a href="https://instagram.com/adena.aurora" target="_blank">
+			<fa-icon [icon]="faInstagram"></fa-icon>
+		</a>
+	</div>
+
+	<div class="projects">
+		<div class="project-title">
+			Deep dive on my work
+		</div>
+
+		<div class="project-grid">
+			<div class="block">
+				<div class="block-title">
+					Gender Útikalauz
+				</div>
+
+				<div class="block-text">
+					A documentation website I launched, used by trans persons, their friends and families; and their associated doctors.
+				</div>
+
+				<a class="block-button" href="https://genderutikalauz.hu" target="_blank">
+					Discover
+				</a>			
+
+				<div class="block-image">
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="block-title">
+					Egy Transz Podcast
+				</div>
+
+				<div class="block-text">
+					A podcast channel for resources and experience sharing, focalising on gender and sexual minority discussions.
+				</div>
+
+				<a class="block-button" href="https://1tpc.hu" target="_blank">
+					Listen
+				</a>				
+
+				<div class="block-image">
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="block-title">
+					Gender Dysphoria Bible
+				</div>
+
+				<div class="block-text">
+					French and Hungarian translation of Gender Dysphoria Bible.
+				</div>
+
+				<a class="block-button" href="https://genderdysphoria.fyi" target="_blank">
+					Discover
+				</a>				
+
+				<div class="block-image">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="links">
+		<div class="links-title">
+			Let's discuss!
+		</div>
+
+		<div class="links-subtitle">
+			I am available for: a coffee, a videocall, a new project, a friendship or a collaboration.
+		</div>
+
+		<div class="links-grid">
+			<div>
+				<a href="https://github.com/adeeena" target="_blank">
+					<fa-icon [icon]="faGithub"></fa-icon>
+				
+					<span class="link-header">
+						<span>Github</span>
+						<span class="sub">/adeeena</span>
+					</span>
+				</a>
+			</div>
+
+			<div>
+				<a href="https://linkedin.com/in/adeeena" target="_blank">
+					<fa-icon [icon]="faLinkedin"></fa-icon>
+				
+					<span class="link-header">
+						<span>Linkedin</span>
+						<span class="sub">/in/adeeena</span>
+					</span>
+				</a>
+			</div>
+
+			<div>
+				<a href="https://instagram.com/adena.aurora" target="_blank">
+					<fa-icon [icon]="faInstagram"></fa-icon>
+				
+					<span class="link-header">
+						<span>Instagram</span>
+						<span class="sub">@adena.aurora</span>
+					</span>
+				</a>
+			</div>
+
+			<div>
+				<a href="mailto:&#097;&#100;&#101;&#110;&#097;&#046;&#109;&#111;&#110;&#116;&#101;&#102;&#105;&#111;&#114;&#105;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank">
+					<fa-icon [icon]="faAddressCard"></fa-icon>
+				
+					<span class="link-header">
+						<span>Email</span>
+						<span class="sub">adena.montefiori<wbr />@gmail.com</span>
+					</span>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>

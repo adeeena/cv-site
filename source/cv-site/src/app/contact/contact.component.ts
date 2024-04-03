@@ -11,25 +11,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 
-import {
-  fadeIn,
-  fadeOut
-} from "../carousel/carousel.animations";
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
-  animations: [
-    trigger('flyInOut', [
-      transition("void => *", [
-        useAnimation(fadeIn, { params: { time: "500ms" } })
-      ]),
-      transition("* => void", [
-        useAnimation(fadeOut, { params: { time: "500ms" } })
-      ]),
-    ])
-  ]
+  styleUrls: ['./contact.component.scss']
 })
 
 export class ContactComponent {

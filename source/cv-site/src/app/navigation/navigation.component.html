@@ -1,7 +1,19 @@
-<div class="container" [ngClass]="getRoute()">
-	<a [routerLink]="'/about'" [ngClass]="getRoute()">about me</a>
-	<a [routerLink]="'/work'" [ngClass]="getRoute()">work</a>
-	<a [routerLink]="'/'" class="home" [ngClass]="getRoute()">MA</a>
-	<a [routerLink]="'/projects'" [ngClass]="getRoute()">projects</a>
-	<a [routerLink]="'/contact'" [ngClass]="getRoute()">contact</a>
+<div class="navigation">
+	<div class="logo-and-name">
+		<div class="logo">
+			<span [innerHTML]="'🧿' | utf8EmojisToImages:'apple':16"></span>
+		</div>
+
+		<a [routerLink]="'/'" class="my-name">
+			Adéna Auróra Montefiori
+		</a>
+	</div>
+
+	<div class="bio">
+		<a [routerLink]="'/bio'">Bio</a>
+	</div>
+
+	<div class="contact">
+		<a target="_blank" href="mailto:&#097;&#100;&#101;&#110;&#097;&#046;&#109;&#111;&#110;&#116;&#101;&#102;&#105;&#111;&#114;&#105;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Contact</a>
+	</div>
 </div>
