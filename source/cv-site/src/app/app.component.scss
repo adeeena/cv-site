@@ -1,4 +1,15 @@
 .main {
 	color: white;
-	padding: 0 3rem;
+}
+
+@media screen and (max-width: 600px) {
+	.main {
+		padding: 0 1rem;
+	}
+}
+
+@media screen and (min-width: 601px) {
+	.main {
+		padding: 0 3rem;
+	}
 }
