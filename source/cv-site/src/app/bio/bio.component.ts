@@ -1,10 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {
-  faLinkedin,
-  faGithub,
-  faInstagram
-} from '@fortawesome/free-brands-svg-icons';
-import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
+import {Component} from '@angular/core';
+import {faGithub, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {faAddressCard} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-bio',

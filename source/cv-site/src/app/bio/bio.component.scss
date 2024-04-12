@@ -1,11 +1,10 @@
 .content {
 	margin-top: 6rem;
 
-	.selfie {	
+	.selfie {
 		text-align: center;
 
 		img {
-			aspect-ratio: 4/3 auto;
 			border: 1px solid #0b72c6;
 			border-radius: 5px;
 		}
@@ -63,7 +62,7 @@
 
 @media screen and (max-width: 600px) {
 	.content {
-		
+
 		padding: 0;
 
 		.selfie {
