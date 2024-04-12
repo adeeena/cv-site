@@ -1,12 +1,13 @@
 .content {
-	margin-top:  6rem;
-	padding:  0 15rem;
+	margin-top: 6rem;
 
 	.selfie {	
 		text-align: center;
 
 		img {
-			max-height: 50vh;
+			aspect-ratio: 4/3 auto;
+			border: 1px solid #0b72c6;
+			border-radius: 5px;
 		}
 	}
 
@@ -21,11 +22,10 @@
 		margin-top: 4rem;
 	}
 
-	.download-buttons {
+	.buttons {
 		margin-top:  2rem;
 
 		a {
-			background: linear-gradient(90deg,#42a5f5 0%,#0b72c6 99%);
 			border-radius: 5px;
 			color: white;
 			box-shadow:  0 0 #0003,0 0 #00000024,0 0 #0000001f;
@@ -39,6 +39,14 @@
 				padding: .5rem 1.5rem;
 			}
 		}
+
+		.pdf {
+			background: linear-gradient(90deg,#42a5f5 0%,#0b72c6 99%);
+		}
+
+		.email {
+			background: linear-gradient(90deg,#da4f7a 0%,#a6294b 99%);
+		}
 	}
 
 	.jump-links {
@@ -49,6 +57,53 @@
 
 		a {
 			color: white;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.content {
+		
+		padding: 0;
+
+		.selfie {
+			img {
+				width: 100%;
+			}
+		}
+
+		.download-buttons {
+			display: grid;
+			gap: 1rem;
+
+			a {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+	.content {
+		padding: 0;
+
+		.selfie {
+			img {
+				max-height: 40vw;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1001px) {
+	.content {
+		padding: 0 15rem;
+
+		.selfie {
+			img {
+				max-height: 50vh;
+			}
 		}
 	}
 }
