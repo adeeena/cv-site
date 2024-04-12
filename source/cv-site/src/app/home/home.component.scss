@@ -1,6 +1,21 @@
+.nazar {
+	clip-path: inset(0 4rem 0 0);
+	position: absolute;
+	right: -4rem;
+	top: -4rem;
+	z-index: 1;
+
+	img {
+		opacity: .2;
+		width: 36rem;
+	}
+}
+
 .content {
 	height: 100%;
 	margin: 6rem 0 4rem;
+	position: relative;
+	z-index: 2;
 
 	.pseudo {
 		color: rgba(255, 255, 255, .8);

@@ -1,7 +1,12 @@
+app-navigation {
+	position: relative;
+	z-index: 2;
+}
+
 .navigation {
 	display: flex;
 	gap: 1.5rem;
-	margin-top: 3rem;
+	padding-top: 3rem;
 
 	.logo-and-name {
 		display: flex;
