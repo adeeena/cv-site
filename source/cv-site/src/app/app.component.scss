@@ -1,9 +1,28 @@
+.nazar {
+  overflow: hidden;
+  max-width: 80vw;
+  position: absolute;
+  right: 0;
+  top: -4rem;
+  z-index: 1;
+
+  img {
+    max-width: 80vw;
+    opacity: .2;
+    position: relative;
+    right: -4rem;
+    width: 36rem;
+  }
+}
+
 .main {
 	color: white;
+  position: relative;
+  z-index: 2;
 
 	app-navigation {
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 	}
 }
 

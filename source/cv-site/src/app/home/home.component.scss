@@ -1,15 +1,4 @@
-.nazar {
-	clip-path: inset(0 4rem 0 0);
-	position: absolute;
-	right: -4rem;
-	top: -4rem;
-	z-index: 1;
 
-	img {
-		opacity: .2;
-		width: 36rem;
-	}
-}
 
 .content {
 	height: 100%;
@@ -52,7 +41,7 @@
 
 		.project-grid {
 			display: grid;
-			
+
 			.block {
 				border: 1px solid rgba(255, 255, 255, .8);
 				border-radius: .5rem;
@@ -87,7 +76,7 @@
 				.block-image {
 					display:flex;
 					justify-content: flex-end;
-					
+
 					img {
 						margin-top: 1rem;
 						width: 100%;
