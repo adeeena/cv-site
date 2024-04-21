@@ -169,6 +169,8 @@
 			.project-grid {
 				gap: 1rem;
 				grid-template-columns: 1fr 1fr;
+        max-width: 75vw;
+        margin: 0 auto;
 			}
 		}
 
