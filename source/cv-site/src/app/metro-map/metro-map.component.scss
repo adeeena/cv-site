@@ -1,0 +1,108 @@
+.content {
+  margin-top: 6rem;
+
+  .showcase {
+    margin: 0 -3rem 5rem;
+    text-align: center;
+
+    div {
+      background-size: cover;
+      height: 50vh;
+    }
+  }
+
+  .introduction {
+    margin-top: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 2.5rem;
+    margin-top: 4rem;
+  }
+
+  .buttons {
+    margin-top:  2rem;
+
+    a {
+      border-radius: 5px;
+      color: white;
+      box-shadow:  0 0 #0003,0 0 #00000024,0 0 #0000001f;
+      margin-right: 1rem;
+      padding: .5rem 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:  all ease .3s;
+
+      &:hover {
+        padding: .5rem 1.5rem;
+      }
+    }
+
+    .pdf {
+      background: linear-gradient(90deg,#42a5f5 0%,#0b72c6 99%);
+    }
+
+    .email {
+      background: linear-gradient(90deg,#da4f7a 0%,#a6294b 99%);
+    }
+  }
+
+  .jump-links {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    a {
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    padding: 0;
+
+    .selfie {
+      img {
+        width: 100%;
+      }
+    }
+
+    .buttons {
+      display: grid;
+      gap: 1rem;
+
+      a {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  .content {
+    padding: 0;
+
+    .selfie {
+      img {
+        max-height: 40vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .content {
+    padding: 0 15rem;
+
+    .selfie {
+      img {
+        max-height: 50vh;
+      }
+    }
+  }
+}
