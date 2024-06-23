@@ -5,6 +5,13 @@
     margin: 0 -3rem 5rem;
     text-align: center;
 
+    .item {
+      display: none;
+
+      &.visible {
+        display: block;
+      }
+    }
     div {
       background-size: cover;
       height: 50vh;

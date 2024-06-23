@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./metro-map.component.scss']
 })
 export class MetroMapComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

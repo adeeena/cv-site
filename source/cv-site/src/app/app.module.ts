@@ -8,6 +8,7 @@ import {NavigationComponent} from './navigation/navigation.component';
 import {Utf8EmojisToImagesModule} from 'ng-utf8-emojis-to-images';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BioComponent} from './bio/bio.component';
+import { NgxSplideModule } from 'ngx-splide';
 import { MetroMapComponent } from './metro-map/metro-map.component';
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MetroMapComponent } from './metro-map/metro-map.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    Utf8EmojisToImagesModule
+    Utf8EmojisToImagesModule,
+    NgxSplideModule
   ],
   providers: [],
   bootstrap: [AppComponent]

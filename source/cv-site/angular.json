@@ -35,9 +35,13 @@
             ],
             "styles": [
               "src/fonts.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@splidejs/splide/dist/css/splide.min.css",
+              "node_modules/@splidejs/splide/dist/css/themes/splide-default.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@splidejs/splide/dist/js/splide.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -103,9 +107,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@splidejs/splide/dist/css/splide.min.css",
+              "node_modules/@splidejs/splide/dist/css/themes/splide-default.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@splidejs/splide/dist/js/splide.js"
+            ]
           }
         }
       }
