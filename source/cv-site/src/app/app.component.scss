@@ -28,12 +28,24 @@
 
 @media screen and (max-width: 600px) {
 	.main {
-		padding: 0 1rem 1rem;
+		&:not(.metro-map) {
+      padding: 0 1rem 1rem;
+    }
+
+    &.metro-map {
+      padding: 0 1rem;
+    }
 	}
 }
 
 @media screen and (min-width: 601px) {
 	.main {
-		padding: 0 3rem 2rem;
+    &:not(.metro-map) {
+      padding: 0 3rem 2rem;
+    }
+
+    &.metro-map {
+      padding: 0;
+    }
 	}
 }

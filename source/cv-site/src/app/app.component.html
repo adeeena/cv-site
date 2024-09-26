@@ -2,7 +2,7 @@
   <img src="assets/images/nazar.svg" alt="Nazar as background decoration." />
 </div>
 
-<div class="main">
+<div class="main" [ngClass]="getClassForCurrentRoute()">
 	<div class="overlay">
 		<app-navigation></app-navigation>
     <router-outlet></router-outlet>
