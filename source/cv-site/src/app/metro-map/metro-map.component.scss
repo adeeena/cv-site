@@ -2,6 +2,35 @@
   margin: unset;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top:  2rem;
+
+  a {
+    border-radius: 5px;
+    color: white;
+    box-shadow:  0 0 #0003,0 0 #00000024,0 0 #0000001f;
+    margin-right: 1rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:  all ease .3s;
+
+    &:hover {
+      padding: .5rem 1.5rem;
+    }
+  }
+
+  .block-button {
+    background: linear-gradient(90deg,#42a5f5 0%,#0b72c6 99%);
+  }
+
+  .block-other-button {
+    background: linear-gradient(90deg,#da4f7a 0%,#a6294b 99%);
+  }
+}
+
 .content {
   margin-top: 6rem;
 
