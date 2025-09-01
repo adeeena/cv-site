@@ -5,7 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from './home/home.component';
 import {NavigationComponent} from './navigation/navigation.component';
-import {Utf8EmojisToImagesModule} from 'ng-utf8-emojis-to-images';
+import {Utf8EmojisToImagesModule} from "./lib/utf8-emojis-to-images.module";
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {BioComponent} from './bio/bio.component';
 import { NgxSplideModule } from 'ngx-splide';

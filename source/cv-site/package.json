@@ -25,7 +25,6 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.0",
     "@fortawesome/free-solid-svg-icons": "^6.1.0",
     "@splidejs/splide": "^4.1.4",
-    "ng-utf8-emojis-to-images": "^1.2.0",
     "ngx-splide": "^3.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
