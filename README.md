@@ -6,7 +6,7 @@ Welcome to the repository for my personal CV and portfolio website! This project
 
 > "I'm a full-stack developer with a passion for creating beautiful and functional web applications. I'm always looking for new challenges and opportunities to learn and grow."
 
-## ✨ Live Demo
+## ✨ Live Version
 
 You can view the live version of my portfolio here: **[https://adena.dev](https://adena.dev)**
 
