@@ -3,9 +3,10 @@ import {faGithub, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-ic
 import {faAddressCard} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    standalone: false
 })
 export class HomeComponent {
   faLinkedin = faLinkedin;
