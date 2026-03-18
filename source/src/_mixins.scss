@@ -1,0 +1,82 @@
+/* Responsive Breakpoint Manager */
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+);
+
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: #{map-get($breakpoints, $size)}) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint `#{$size}` not found.";
+  }
+}
+
+/* Shared Component Styles */
+@mixin card-style {
+  background: var(--memory-frame);
+  border: var(--border-thick);
+  padding: var(--spacing-md);
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  box-shadow: var(--shadow-hard);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      z-index: 10;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-bottom: var(--border-thick);
+    margin-bottom: var(--spacing-md);
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+  }
+
+  @media (hover: hover) {
+    &:hover img {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+@mixin btn-style {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: var(--bauhaus-black);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 var(--bauhaus-red);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+
+  @media (hover: hover) {
+    &:hover {
+      background: var(--bauhaus-red);
+      box-shadow: 6px 6px 0 var(--bauhaus-black);
+      transform: translate(-2px, -2px);
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      margin: 0;
+    }
+  }
+}

@@ -1,226 +1,154 @@
-<div class="content">
-	<div class="pseudo">
-		&#64;adeeena
-	</div>
-	<h1>
-		Adéna Auróra Muráncsik
-	</h1>
+<div class="content fade-in-up">
 
-	<div>
-		Welcome <span [innerHTML]="'👋' | utf8EmojisToImages:'apple':16"></span><br />
-		<br />
-		I am a Solutions Architect at <a href="https://silversea.com" target="_blank" rel="noopener">Silversea Monaco</a>.
-    <br />
-		<br />
-		I’m currently improving my architectural application designing skills among with various web frontend framework technologies.<br />
-		<br />
-		In my free time I like experimenting and trying different forms of art as well as creating digital content of any kind.<br />
-		<br />
-		<a [routerLink]="'/bio'">Learn more.</a>
-	</div>
+  <header>
+    <div class="pseudo">@adeeena</div>
+    <h1>Adéna Auróra Muráncsik</h1>
 
-	<div class="jump-links">
-		<a href="https://github.com/adeeena" target="_blank" rel="noopener">
-			<fa-icon [icon]="faGithub"></fa-icon>
-		</a>
-
-		<a href="https://linkedin.com/in/adeeena" target="_blank" rel="noopener">
-			<fa-icon [icon]="faLinkedin"></fa-icon>
-		</a>
-
-		<a href="https://instagram.com/adena.aurora" target="_blank" rel="noopener">
-			<fa-icon [icon]="faInstagram"></fa-icon>
-		</a>
-	</div>
-
-	<div class="projects block">
-		<div class="project-title block-title">
-			Deep dive on my work
-		</div>
-
-		<div class="project-grid">
-			<div class="block">
-        <div>
-          <div class="block-title">
-            Gender Útikalauz
-          </div>
-
-          <div class="block-text">
-            A documentation website I launched, used by trans persons, their friends and families; and their associated doctors.
-          </div>
-
-          <a class="block-button" href="https://genderutikalauz.hu" target="_blank" rel="noopener">
-            Discover
-          </a>
-        </div>
-
-				<div class="block-image">
-					<img src="assets/images/gender-utikalauz.png" alt="Gender Útikalauz" />
-				</div>
-			</div>
-
-			<div class="block">
-				<div>
-          <div class="block-title">
-            Egy Transz Podcast
-          </div>
-
-          <div class="block-text">
-            A podcast channel for resources and experience sharing, focalizing on gender and sexual minority discussions.
-          </div>
-
-          <a class="block-button" href="https://1tpc.hu" target="_blank" rel="noopener">
-            Listen
-          </a>
-        </div>
-
-				<div class="block-image">
-					<img src="assets/images/1tpc.png" alt="Egy Transz Podcast" />
-				</div>
-			</div>
-
-      <div class="block">
-        <div>
-          <div class="block-title">
-            Hungarian Motorway and Expressway map
-          </div>
-
-          <div class="block-text">
-            A visual art project, illustrating the Hungarian Highway system in a
-            schematic, "subway-like" metro map. <br />Details and ordering options soon.
-          </div>
-
-          <a class="block-button" [routerLink]="'/metro-map'" target="_blank"
-             rel="noopener">
-            Check out
-          </a>
-        </div>
-
-        <div class="block-image">
-          <img src="assets/images/metromap.png" alt="Hungarian Motorway and Expressway map" />
-        </div>
-      </div>
-
-      <div class="block">
-        <div>
-          <div class="block-title">
-            Leaflets - Making informed decisions about hormone therapy
-          </div>
-
-          <div class="block-text">
-            Leaflets (both full color and low-color profile) that explains the effects of
-            feminizing or masculinizing hormone therapy, with fill-in-the-blanks sections
-            to help patients see whether taking hormones would help you achieve their
-            transition goals. A collaboration with <a
-            href="https://hatter.hu" target="_blank" rel="noopener">Háttér Társaság</a>
-            for physical distribution.
-          </div>
-
-          <a class="block-button" href="https://genderutikalauz.hu/#/entry?id=brosura-hormonok-kitoltheto-utmutato" target="_blank"
-             rel="noopener">
-            Read more
-          </a>
-        </div>
-
-        <div class="block-image">
-          <img src="assets/images/hormonok.jpeg"
-               alt="Feminizáló - Maszkulinizáló Hormonok." />
-        </div>
-      </div>
-
-			<div class="block">
-				<div>
-          <div class="block-title">
-            Gender Dysphoria Bible
-          </div>
-
-          <div class="block-text">
-            French and Hungarian translation of Gender Dysphoria Bible online website,
-            explaining Gender Non-Conforming people on what types of dysphoria exist,
-            giving a better understanding for their feelings.
-          </div>
-
-          <a class="block-button" href="https://genderdysphoria.fyi" target="_blank"
-             rel="noopener">
-            Discover
-          </a>
-        </div>
-
-				<div class="block-image">
-					<img src="assets/images/gdb.png" alt="Nemi Diszfória Biblia" />
-				</div>
-			</div>
-		</div>
-	</div>
-
-  <div class="public-speech block">
-    <div class="block-title">
-      Presentations, Public speeches
+    <div class="intro-text">
+      <p>
+        Hi there <span [innerHTML]="'👋' | utf8EmojisToImages:'apple':16"></span>
+        I am a <strong>Senior Software Engineer</strong> at <a href="https://www.philips.com/healthcare" target="_blank" rel="noopener">Philips / Capsuletech</a> in Paris.
+      </p>
+      <p>
+        Passionate about the <strong>medical field</strong>, I apply the architectural precision and experience I gained as a Solutions Architect at Silversea Monaco to build systems that matter.
+      </p>
+      <p>
+        <a [routerLink]="'/bio'" class="btn-link">Read my full story &rarr;</a>
+      </p>
     </div>
 
+    <div class="jump-links">
+      <a href="https://github.com/adeeena" target="_blank" rel="noopener" aria-label="GitHub">
+        <fa-icon [icon]="faGithub"></fa-icon>
+      </a>
+      <a href="https://linkedin.com/in/adeeena" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <fa-icon [icon]="faLinkedin"></fa-icon>
+      </a>
+      <a href="https://instagram.com/adena.aurora" target="_blank" rel="noopener" aria-label="Instagram">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+      </a>
+    </div>
+  </header>
+
+  <section class="projects">
+    <h2 class="project-title">Selected Works</h2>
+
+    <div class="project-grid">
+
+      <!-- Gender Utikalauz -->
+      <article class="block">
+        <div class="block-image">
+          <img src="assets/images/gender-utikalauz.png" alt="Gender Útikalauz Screenshot" loading="lazy" />
+        </div>
+        <h3 class="block-title">Gender Útikalauz</h3>
+        <p class="block-text">
+          A comprehensive documentation platform for the transgender community, their families, and medical professionals.
+        </p>
+        <a class="block-button" href="https://genderutikalauz.hu" target="_blank" rel="noopener">
+          Visit Site
+        </a>
+      </article>
+
+      <!-- Podcast -->
+      <article class="block">
+        <div class="block-image">
+          <img src="assets/images/1tpc.png" alt="Egy Transz Podcast Cover" loading="lazy" />
+        </div>
+        <h3 class="block-title">Egy Transz Podcast</h3>
+        <p class="block-text">
+          A resource and experience-sharing channel focusing on gender and sexual minority discussions.
+        </p>
+        <a class="block-button" href="https://1tpc.hu" target="_blank" rel="noopener">
+          Listen Now
+        </a>
+      </article>
+
+      <!-- Metro Map -->
+      <article class="block">
+        <div class="block-image">
+          <img src="assets/images/metromap.png" alt="Hungarian Motorway Map Art" loading="lazy" />
+        </div>
+        <h3 class="block-title">Hungarian Metro Map</h3>
+        <p class="block-text">
+          Visual art project reimagining the Hungarian Highway system as a schematic subway map.
+        </p>
+        <a class="block-button" [routerLink]="'/metro-map'">
+          View Project
+        </a>
+      </article>
+
+      <!-- Leaflets -->
+      <article class="block">
+        <div class="block-image">
+          <img src="assets/images/hormonok.jpeg" alt="Hormone Therapy Leaflets" loading="lazy" />
+        </div>
+        <h3 class="block-title">Information Leaflets</h3>
+        <p class="block-text">
+          Educational materials on hormone therapy effects, created in collaboration with Háttér Társaság.
+        </p>
+        <a class="block-button" href="https://genderutikalauz.hu/#/entry?id=brosura-hormonok-kitoltheto-utmutato" target="_blank" rel="noopener">
+          Read Guide
+        </a>
+      </article>
+
+      <!-- Dysphoria Bible -->
+      <article class="block">
+        <div class="block-image">
+          <img src="assets/images/gdb.png" alt="Gender Dysphoria Bible" loading="lazy" />
+        </div>
+        <h3 class="block-title">Dysphoria Bible</h3>
+        <p class="block-text">
+          French and Hungarian translations of the Gender Dysphoria Bible, helping people understand their feelings.
+        </p>
+        <a class="block-button" href="https://genderdysphoria.fyi" target="_blank" rel="noopener">
+          Explore
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="public-speech">
+    <h2 class="block-title">Speaking</h2>
     <div class="public-speech-list">
       <div class="public-speech-entry">
-        <b>2024/06/20: </b> <a
-        href="https://public.genderutikalauz.hu/ext/20240620-TransgenderMedicine.mp4">Transgender Medicine - Panel Discussion</a>
+        <strong>2024.06.20</strong> &mdash;
+        <a href="https://public.genderutikalauz.hu/ext/20240620-TransgenderMedicine.mp4">Transgender Medicine Panel Discussion</a>
       </div>
     </div>
-  </div>
+  </section>
 
+  <footer class="links">
+    <h2 class="links-title">Let's Connect</h2>
+    <p class="links-subtitle">
+      Open for coffee, collaboration, or a friendly chat about architecture and art.
+    </p>
 
-  <div class="links">
-		<div class="links-title">
-			Let's discuss!
-		</div>
+    <div class="links-grid">
+      <a href="https://github.com/adeeena" target="_blank" rel="noopener">
+        <fa-icon [icon]="faGithub"></fa-icon>
+        <span class="link-header">GitHub</span>
+        <span class="sub">/adeeena</span>
+      </a>
 
-		<div class="links-subtitle">
-			I am available for: a coffee, a video call, a new project, a friendship or a collaboration.
-		</div>
+      <a href="https://linkedin.com/in/adeeena" target="_blank" rel="noopener">
+        <fa-icon [icon]="faLinkedin"></fa-icon>
+        <span class="link-header">LinkedIn</span>
+        <span class="sub">/in/adeeena</span>
+      </a>
 
-		<div class="links-grid">
-			<div>
-				<a href="https://github.com/adeeena" target="_blank" rel="noopener">
-					<fa-icon [icon]="faGithub"></fa-icon>
+      <a href="https://instagram.com/adena.aurora" target="_blank" rel="noopener">
+        <fa-icon [icon]="faInstagram"></fa-icon>
+        <span class="link-header">Instagram</span>
+        <span class="sub">@adena.aurora</span>
+      </a>
 
-					<span class="link-header">
-						<span>Github</span>
-						<span class="sub">/adeeena</span>
-					</span>
-				</a>
-			</div>
+      <a href="mailto:&#097;&#100;&#101;&#110;&#097;&#064;&#105;&#107;&#046;&#109;&#101;">
+        <fa-icon [icon]="faAddressCard"></fa-icon>
+        <span class="link-header">Email</span>
+        <span class="sub">adena@ik.me</span>
+      </a>
+    </div>
+  </footer>
 
-			<div>
-				<a href="https://linkedin.com/in/adeeena" target="_blank" rel="noopener">
-					<fa-icon [icon]="faLinkedin"></fa-icon>
-
-					<span class="link-header">
-						<span>Linkedin</span>
-						<span class="sub">/in/adeeena</span>
-					</span>
-				</a>
-			</div>
-
-			<div>
-				<a href="https://instagram.com/adena.aurora" target="_blank" rel="noopener">
-					<fa-icon [icon]="faInstagram"></fa-icon>
-
-					<span class="link-header">
-						<span>Instagram</span>
-						<span class="sub">&#64;adena.aurora</span>
-					</span>
-				</a>
-			</div>
-
-			<div>
-				<a
-          href="mailto:&#097;&#100;&#101;&#110;&#097;&#064;&#105;&#107;&#046;&#109;&#101;" target="_blank" rel="noopener">
-					<fa-icon [icon]="faAddressCard"></fa-icon>
-
-					<span class="link-header">
-						<span>Email</span>
-						<span class="sub">adena<wbr />&#64;ik.me</span>
-					</span>
-				</a>
-			</div>
-		</div>
-	</div>
 </div>

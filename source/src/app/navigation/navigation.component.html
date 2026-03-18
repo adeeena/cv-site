@@ -1,19 +1,15 @@
-<div class="navigation">
-	<div class="logo-and-name">
-		<div class="logo">
-			<span [innerHTML]="'🧿' | utf8EmojisToImages:'apple':16"></span>
-		</div>
+<nav class="navigation">
+  <div class="logo">
+    <a routerLink="/" class="logo-link">
+      <span class="logo-initial">A</span>
+      <span class="logo-text">Adéna Auróra Muráncsik</span>
+    </a>
+  </div>
 
-		<a [routerLink]="'/'" class="my-name">
-			Adéna Auróra Muráncsik
-		</a>
-	</div>
+  <!-- Desktop Links -->
+  <div class="nav-links desktop-only">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a routerLink="/bio" routerLinkActive="active">Bio</a>
+    <a href="mailto:&#097;&#100;&#101;&#110;&#097;&#064;&#105;&#107;&#046;&#109;&#101;" class="contact-btn">Contact</a>
+  </div>
 
-	<div class="bio">
-		<a [routerLink]="'/bio'">Bio</a>
-	</div>
-
-	<div class="contact">
-		<a target="_blank" href="mailto:&#097;&#100;&#101;&#110;&#097;&#064;&#105;&#107;&#046;&#109;&#101;">Contact</a>
-	</div>
-</div>

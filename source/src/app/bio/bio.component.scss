@@ -1,107 +1,243 @@
+@import '../../mixins';
+
 .content {
-	margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--spacing-md) var(--spacing-xl);
 
-	.selfie {
-		text-align: center;
-
-		img {
-			border: 1px solid #0b72c6;
-			border-radius: 5px;
-		}
-	}
-
-	.introduction {
-		margin-top: 1.5rem;
-	}
-
-	h1 {
-		font-size: 2rem;
-		font-weight: normal;
-		line-height: 2.5rem;
-		margin-top: 4rem;
-	}
-
-	.buttons {
-		margin-top:  2rem;
-
-		a {
-			border-radius: 5px;
-			color: white;
-			box-shadow:  0 0 #0003,0 0 #00000024,0 0 #0000001f;
-			margin-right: 1rem;
-			padding: .5rem 1rem;
-			text-decoration: none;
-			text-transform: uppercase;
-			transition:  all ease .3s;
-
-			&:hover {
-				padding: .5rem 1.5rem;
-			}
-		}
-
-		.pdf {
-			background: linear-gradient(90deg,#42a5f5 0%,#0b72c6 99%);
-		}
-
-		.email {
-			background: linear-gradient(90deg,#da4f7a 0%,#a6294b 99%);
-		}
-	}
-
-	.jump-links {
-		display: flex;
-		font-size: 1.5rem;
-		gap: 1rem;
-		margin: 1rem 0;
-
-		a {
-			color: white;
-		}
-	}
+  @include breakpoint("md") {
+    padding: 0 var(--spacing-lg) var(--spacing-xl);
+  }
 }
 
-@media screen and (max-width: 600px) {
-	.content {
-		padding: 0;
-
-		.selfie {
-			img {
-				width: 100%;
-			}
-		}
-
-		.buttons {
-			display: grid;
-			gap: 1rem;
-
-			a {
-				display: block;
-				text-align: center;
-			}
-		}
-	}
+.bio-container {
+  max-width: 800px;
+  width: 100%;
 }
 
-@media screen and (min-width: 601px) and (max-width: 1000px) {
-	.content {
-		padding: 0;
+.bio-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
 
-		.selfie {
-			img {
-				max-height: 40vw;
-			}
-		}
-	}
+  .selfie-frame {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto var(--spacing-md);
+    border: var(--border-thick);
+    padding: 8px;
+    background: white;
+    box-shadow: 8px 8px 0 var(--bauhaus-black);
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+
+    @include breakpoint("md") {
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+      box-shadow: 10px 10px 0 var(--bauhaus-black);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        transform: rotate(0deg) scale(1.05);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
+    }
+
+    @media (hover: hover) {
+      &:hover img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    @include breakpoint("md") {
+      font-size: 3rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @include breakpoint("md") {
+      font-size: 1.25rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+
+    @include breakpoint("sm") {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+        @include btn-style;
+    }
+
+    .btn-secondary {
+      @include btn-style;
+      background: white;
+      color: var(--bauhaus-black);
+      border: var(--border-thick);
+      box-shadow: 4px 4px 0 var(--bauhaus-black);
+
+      @media (hover: hover) {
+        &:hover {
+          background: var(--bauhaus-black);
+          color: white;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (min-width: 1001px) {
-	.content {
-		padding: 0 15rem;
+.bio-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--bauhaus-black);
 
-		.selfie {
-			img {
-				max-height: 50vh;
-			}
-		}
-	}
+  p {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: var(--spacing-lg);
+    color: var(--bauhaus-blue);
+    @include breakpoint("md") {
+      font-size: 1.5rem;
+    }
+  }
+
+  strong {
+    font-weight: 700;
+    background: linear-gradient(120deg, transparent 60%, var(--bauhaus-yellow) 60%);
+    background-size: 100% 40%;
+    background-position: 0 90%;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    font-weight: 700;
+    color: var(--bauhaus-blue);
+    @media (hover: hover) {
+      &:hover {
+        background: var(--bauhaus-blue);
+        color: white;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    padding-left: 0;
+    border-left: none;
+    position: relative;
+    display: inline-block;
+
+    @include breakpoint("md") {
+      font-size: 2rem;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: var(--bauhaus-red);
+      margin-top: 10px;
+    }
+  }
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: var(--bauhaus-black);
+  margin: var(--spacing-xl) 0;
+  opacity: 0.2;
+}
+
+.bio-footer {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  border-top: var(--border-thick);
+
+  h3 {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+    @include breakpoint("md") {
+      font-size: 2rem;
+    }
+  }
+
+  .email-section {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-lg);
+    @include breakpoint("md") {
+      font-size: 1.5rem;
+    }
+  }
+
+  .email-link {
+    font-weight: 700;
+    color: var(--bauhaus-black);
+    border-bottom: 3px solid var(--bauhaus-yellow);
+
+    @media (hover: hover) {
+      &:hover {
+        background: var(--bauhaus-yellow);
+      }
+    }
+  }
+
+  .jump-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+
+    a {
+      font-size: 1.75rem;
+      color: var(--bauhaus-black);
+      transition: transform 0.2s;
+      border: none;
+
+      @include breakpoint("md") {
+        font-size: 2rem;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          transform: scale(1.2);
+          color: var(--bauhaus-red);
+          background: transparent;
+        }
+      }
+    }
+  }
 }

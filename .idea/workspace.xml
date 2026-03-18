@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,10 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b99bb29c-d4f6-45c5-a2bf-115658bea174" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/cv-site.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/src/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/bio/bio.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/bio/bio.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/bio/bio.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/bio/bio.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/metro-map/metro-map.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/metro-map/metro-map.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/metro-map/metro-map.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/metro-map/metro-map.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/navigation/navigation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/navigation/navigation.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/app/navigation/navigation.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/app/navigation/navigation.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +47,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3B8RH7Q0ZBJNDISICWS6XUEzmDX" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,8 +67,13 @@
     "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "last_opened_file_path": "/Users/adena/Github/cv-site",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/adena/Github/cv-site/source/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -77,6 +96,7 @@
       <updated>1773868620128</updated>
       <workItem from="1773868624830" duration="301000" />
       <workItem from="1773869363126" duration="36000" />
+      <workItem from="1773869410380" duration="4622000" />
     </task>
     <servers />
   </component>
@@ -96,5 +116,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

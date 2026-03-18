@@ -5,34 +5,52 @@
 .buttons {
   display: flex;
   justify-content: center;
-  margin-top:  2rem;
+  margin-top: 2rem;
+  gap: 1rem;
 
   a {
-    border-radius: 5px;
-    color: white;
-    box-shadow:  0 0 #0003,0 0 #00000024,0 0 #0000001f;
-    margin-right: 1rem;
-    padding: .5rem 1rem;
+    border: 2px solid var(--bauhaus-black);
+    color: var(--bauhaus-white);
+    padding: 0.5rem 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
-    transition:  all ease .3s;
+    font-weight: 700;
+    transition: all 0.2s;
+    box-shadow: 4px 4px 0 var(--bauhaus-black);
+    margin-right: 0; /* Override */
 
     &:hover {
-      padding: .5rem 1.5rem;
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--bauhaus-black);
+    }
+
+    &:active {
+        transform: translate(0, 0);
+        box-shadow: 2px 2px 0 var(--bauhaus-black);
     }
   }
 
-  .block-button {
-    background: linear-gradient(90deg,#42a5f5 0%,#0b72c6 99%);
+  .block-button, .pdf {
+    background: var(--bauhaus-blue);
+
+    &:hover {
+        background: var(--bauhaus-white);
+        color: var(--bauhaus-blue);
+    }
   }
 
-  .block-other-button {
-    background: linear-gradient(90deg,#da4f7a 0%,#a6294b 99%);
+  .block-other-button, .email {
+    background: var(--bauhaus-red);
+
+    &:hover {
+        background: var(--bauhaus-white);
+        color: var(--bauhaus-red);
+    }
   }
 }
 
 .content {
-  margin-top: 6rem;
+  /* REMOVED margin-top: 4rem; */
 
   .showcase {
     margin: 0 -3rem 5rem;
@@ -48,55 +66,50 @@
     div {
       background-size: cover;
       height: 50vh;
+      border-top: 3px solid var(--bauhaus-black);
+      border-bottom: 3px solid var(--bauhaus-black);
     }
   }
 
   .introduction {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    color: var(--bauhaus-black);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h1 {
-    font-size: 2rem;
-    font-weight: normal;
-    line-height: 2.5rem;
-    margin-top: 4rem;
-  }
-
-  .buttons {
-    margin-top:  2rem;
-
-    a {
-      border-radius: 5px;
-      color: white;
-      box-shadow:  0 0 #0003,0 0 #00000024,0 0 #0000001f;
-      margin-right: 1rem;
-      padding: .5rem 1rem;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition:  all ease .3s;
-
-      &:hover {
-        padding: .5rem 1.5rem;
-      }
-    }
-
-    .pdf {
-      background: linear-gradient(90deg,#42a5f5 0%,#0b72c6 99%);
-    }
-
-    .email {
-      background: linear-gradient(90deg,#da4f7a 0%,#a6294b 99%);
-    }
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    /* REMOVED margin-top: 4rem; */
+    margin-bottom: 2rem; /* Added bottom margin for spacing */
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 5px solid var(--bauhaus-yellow);
+    display: table; /* To fit content width */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem 0.5rem;
   }
 
   .jump-links {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 2rem;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
+    justify-content: center;
 
     a {
-      color: white;
+      color: var(--bauhaus-black);
+      transition: color 0.2s;
+
+      &:hover {
+          color: var(--bauhaus-red);
+      }
     }
   }
 }
@@ -108,6 +121,7 @@
     .selfie {
       img {
         width: 100%;
+        border: 2px solid var(--bauhaus-black);
       }
     }
 
@@ -118,7 +132,12 @@
       a {
         display: block;
         text-align: center;
+        margin: 0;
       }
+    }
+
+    .showcase {
+        margin: 0 -1rem 3rem;
     }
   }
 }
@@ -130,6 +149,8 @@
     .selfie {
       img {
         max-height: 40vw;
+        border: 2px solid var(--bauhaus-black);
+        box-shadow: 8px 8px 0 var(--bauhaus-black);
       }
     }
   }
@@ -143,11 +164,14 @@
   .content {
     padding: 0;
 
-
-
     .selfie {
+      text-align: center;
+      margin-top: 2rem;
+
       img {
         max-height: 50vh;
+        border: 3px solid var(--bauhaus-black);
+        box-shadow: 12px 12px 0 var(--bauhaus-black);
       }
     }
   }
