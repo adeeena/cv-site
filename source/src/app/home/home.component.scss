@@ -3,94 +3,74 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
-  padding: 0 var(--spacing-md);
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
 
   @include breakpoint("md") {
-    padding: 0 var(--spacing-lg);
+    padding: 0 2.5rem 5rem;
   }
 }
 
 header {
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 0;
 
   .pseudo {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--bauhaus-blue);
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 1rem;
     display: block;
-    border-bottom: 2px solid var(--bauhaus-red);
     width: fit-content;
-
-    @include breakpoint("md") {
-      font-size: 1.25rem;
-    }
   }
 
   h1 {
-    margin-bottom: var(--spacing-md);
-    line-height: 1.1;
-    max-width: 800px;
-    display: block;
-    font-style: italic;
+    margin-bottom: 1rem;
+    max-width: 18ch;
   }
 
   .intro-text {
     font-size: 1.125rem;
-    line-height: 1.5;
+    line-height: 1.65;
     color: var(--bauhaus-black);
-    max-width: 700px;
-    margin-top: var(--spacing-md);
-
-    @include breakpoint("md") {
-      font-size: 1.5rem;
-    }
+    max-width: 62ch;
+    margin-top: 1.25rem;
 
     a {
-      font-weight: 800;
+      font-weight: 700;
       color: var(--bauhaus-blue);
-      border-bottom: 3px solid var(--bauhaus-yellow);
-      @media (hover: hover) {
-        &:hover {
-          background: var(--bauhaus-yellow);
-          color: var(--bauhaus-black);
-        }
-      }
     }
   }
 }
 
 .jump-links {
   display: flex;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
 
   a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    border: var(--border-thick);
-    background: white;
-    font-size: 1.25rem;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    background: var(--memory-frame);
+    font-size: 1.1rem;
     color: var(--bauhaus-black);
-    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 4px 4px 0 var(--bauhaus-black);
+    transition: color 0.2s ease, border-color 0.2s ease;
 
     @include breakpoint("md") {
-      width: 60px;
-      height: 60px;
-      font-size: 1.5rem;
+      width: 46px;
+      height: 46px;
     }
 
     @media (hover: hover) {
       &:hover {
-        transform: translateY(-4px) rotate(3deg);
-        box-shadow: 8px 8px 0 var(--bauhaus-red);
-        background: var(--bauhaus-black);
-        color: white;
+        border-color: var(--bauhaus-blue);
+        color: var(--bauhaus-blue);
       }
     }
   }
@@ -98,39 +78,27 @@ header {
 
 .projects {
   .project-title {
-    font-size: 1.75rem;
-    margin-bottom: var(--spacing-md);
-    border-bottom: 3px solid var(--bauhaus-blue);
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--line);
     display: inline-block;
-    padding-right: var(--spacing-md);
-    font-style: italic;
+    padding: 0 0 0.75rem;
+    font-style: normal;
 
     @include breakpoint("md") {
-      font-size: 2.5rem;
-      margin-bottom: var(--spacing-lg);
-      border-bottom-width: 5px;
-      padding-right: var(--spacing-lg);
+      font-size: 2.25rem;
+      margin-bottom: 2rem;
     }
   }
 
   .project-grid {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
-
-    /* Extra tight for SE/Small screens */
-    @media (max-width: 360px) {
-      gap: 1.5rem;
-    }
-
-    @include breakpoint("md") {
-      gap: 4rem;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    }
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
 
     .block {
       @include card-style;
-      background: white;
+      background: var(--memory-frame);
 
       .block-title {
         font-size: 1.25rem;
@@ -146,7 +114,7 @@ header {
 
       .block-text {
         font-size: 1rem;
-        color: #555;
+        color: var(--text-muted);
         margin-bottom: var(--spacing-md);
         flex-grow: 1;
       }
@@ -161,20 +129,14 @@ header {
         order: -1;
         margin-bottom: var(--spacing-md);
         overflow: hidden;
-        border: var(--border-thick);
 
         img {
           width: 100%;
-          height: 200px;
+          aspect-ratio: 16 / 10;
           object-fit: cover;
           display: block;
-          transition: transform 0.5s ease;
-        }
-      }
-
-      @media (hover: hover) {
-        &:hover .block-image img {
-          transform: scale(1.05);
+          border: 0;
+          margin: 0;
         }
       }
     }
@@ -182,44 +144,32 @@ header {
 }
 
 .public-speech {
-  background: var(--bauhaus-yellow);
-  padding: var(--spacing-md);
-  border: var(--border-thick);
-  box-shadow: 6px 6px 0 var(--bauhaus-black);
-
-  @include breakpoint("md") {
-    padding: var(--spacing-lg);
-    box-shadow: 8px 8px 0 var(--bauhaus-black);
-  }
+  background: transparent;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
 
   .block-title {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-md);
     color: var(--bauhaus-black);
-    font-style: italic;
+    font-style: normal;
 
     @include breakpoint("md") {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
 
   .public-speech-list {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
 
     @include breakpoint("md") {
-      font-size: 1.2rem;
+      font-size: 1.05rem;
     }
 
     a {
       text-decoration: underline;
-      color: var(--bauhaus-black);
-      @media (hover: hover) {
-        &:hover {
-          background: black;
-          color: var(--bauhaus-yellow);
-        }
-      }
+      color: var(--bauhaus-blue);
     }
   }
 }
@@ -227,56 +177,29 @@ header {
 .links {
   background: var(--bauhaus-black);
   color: white;
-  padding: var(--spacing-xl) var(--spacing-md);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  padding: 3rem 1rem;
+  text-align: left;
 
   @include breakpoint("md") {
-    padding: var(--spacing-xl) var(--spacing-lg);
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -30px;
-    right: -30px;
-    width: 100px;
-    height: 100px;
-    background: var(--bauhaus-red);
-    border-radius: 50%;
-    z-index: 0;
-
-    @include breakpoint("md") {
-      top: -50px;
-      right: -50px;
-      width: 200px;
-      height: 200px;
-    }
+    padding: 3.5rem 2.5rem;
   }
 
   .links-title {
-    font-size: 2rem;
+    font-size: 1.875rem;
     margin-bottom: var(--spacing-sm);
-    position: relative;
-    z-index: 1;
     color: white;
-    font-style: italic;
+    font-style: normal;
 
     @include breakpoint("md") {
-      font-size: 3rem;
+      font-size: 2.25rem;
     }
   }
 
   .links-subtitle {
     font-size: 1rem;
     margin-bottom: var(--spacing-lg);
-    position: relative;
-    z-index: 1;
-    color: #ccc;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #D0D0D0;
+    max-width: 60ch;
 
     @include breakpoint("md") {
       font-size: 1.25rem;
@@ -284,33 +207,20 @@ header {
   }
 
   .links-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--spacing-md);
-    position: relative;
-    z-index: 1;
-
-    @include breakpoint("md") {
-      flex-direction: row;
-      justify-content: center;
-      gap: var(--spacing-lg);
-      flex-wrap: wrap;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+    gap: 1rem 1.5rem;
 
     a {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       color: white;
-      border: 2px solid white;
-      padding: var(--spacing-md) var(--spacing-lg);
-      min-width: auto;
-      transition: all 0.3s ease;
-
-      @include breakpoint("md") {
-        min-width: 140px;
-      }
+      border: 0;
+      border-top: 1px solid #555;
+      padding: 1rem 0 0;
+      min-width: 0;
+      transition: color 0.2s ease;
 
       fa-icon {
         font-size: 1.5rem;
@@ -323,24 +233,20 @@ header {
 
       span {
         font-weight: 700;
-        text-transform: uppercase;
+        text-transform: none;
       }
 
       .sub {
         font-size: 0.8rem;
         font-weight: 400;
-        opacity: 0.7;
+        color: #D0D0D0;
+        opacity: 1;
         margin-top: 5px;
       }
 
       @media (hover: hover) {
         &:hover {
-          background: white;
-          color: var(--bauhaus-black);
-          transform: translateY(-5px);
-          box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-
-          .sub { opacity: 1; }
+          color: #9AB0FF;
         }
       }
     }

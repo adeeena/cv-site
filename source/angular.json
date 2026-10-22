@@ -32,7 +32,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "cv-*.pdf",
+                "input": "../docs",
+                "output": ""
+              }
             ],
             "styles": [
               "src/fonts.scss",

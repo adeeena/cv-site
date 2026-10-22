@@ -1,119 +1,127 @@
 @import '../../mixins';
 
 .content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  padding: 0 var(--spacing-md) var(--spacing-xl);
+  padding: 0 1rem 4rem;
 
   @include breakpoint("md") {
-    padding: 0 var(--spacing-lg) var(--spacing-xl);
+    padding: 0 2.5rem 5rem;
   }
 }
 
 .bio-container {
-  max-width: 800px;
+  max-width: 920px;
   width: 100%;
 }
 
 .bio-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "photo" "title" "subtitle" "actions";
+  justify-items: center;
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  gap: 0.25rem;
+  margin-bottom: 3rem;
 
   .selfie-frame {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto var(--spacing-md);
-    border: var(--border-thick);
-    padding: 8px;
-    background: white;
-    box-shadow: 8px 8px 0 var(--bauhaus-black);
-    transform: rotate(-3deg);
-    transition: transform 0.3s ease;
+    grid-area: photo;
+    width: 9.5rem;
+    height: 9.5rem;
+    margin: 0 0 1rem;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 4px;
+    background: var(--memory-frame);
 
     @include breakpoint("md") {
-      width: 200px;
-      height: 200px;
-      padding: 10px;
-      box-shadow: 10px 10px 0 var(--bauhaus-black);
-    }
-
-    @media (hover: hover) {
-      &:hover {
-        transform: rotate(0deg) scale(1.05);
-      }
+      width: 11rem;
+      height: 11rem;
     }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: grayscale(100%);
-      transition: filter 0.5s ease;
-    }
-
-    @media (hover: hover) {
-      &:hover img {
-        filter: grayscale(0%);
-      }
+      border: 0;
     }
   }
 
   h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    grid-area: title;
+    font-size: 2.25rem;
+    margin: 0;
+    max-width: 16ch;
     @include breakpoint("md") {
-      font-size: 3rem;
+      font-size: 3.25rem;
     }
   }
 
   .subtitle {
+    grid-area: subtitle;
     font-size: 1rem;
-    color: #555;
-    margin-bottom: var(--spacing-lg);
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    color: var(--text-muted);
+    margin: 0 0 1rem;
+    font-weight: 600;
     @include breakpoint("md") {
-      font-size: 1.25rem;
+      font-size: 1.0625rem;
     }
   }
 
   .actions {
+    grid-area: actions;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-md);
-
-    @include breakpoint("sm") {
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
 
     .btn {
-        @include btn-style;
+      @include btn-style;
     }
 
     .btn-secondary {
-      @include btn-style;
-      background: white;
+      background: transparent;
       color: var(--bauhaus-black);
-      border: var(--border-thick);
-      box-shadow: 4px 4px 0 var(--bauhaus-black);
+      border: 1px solid var(--line);
+      box-shadow: none;
 
       @media (hover: hover) {
         &:hover {
-          background: var(--bauhaus-black);
+          background: var(--bauhaus-blue);
           color: white;
+          border-color: var(--bauhaus-blue);
         }
       }
+    }
+  }
+
+  @include breakpoint("md") {
+    grid-template-columns: 11rem minmax(0, 1fr);
+    grid-template-areas: "photo title" "photo subtitle" "photo actions";
+    justify-items: start;
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 0.5rem;
+    text-align: left;
+
+    .selfie-frame {
+      grid-row: 1 / 4;
+      margin: 0;
+    }
+
+    .actions {
+      justify-content: flex-start;
     }
   }
 }
 
 .bio-text {
-  font-size: 1.125rem;
-  line-height: 1.8;
+  max-width: 68ch;
+  margin: 0 auto;
+  font-size: 1.0625rem;
+  line-height: 1.75;
   color: var(--bauhaus-black);
 
   p {
@@ -121,21 +129,14 @@
   }
 
   .lead {
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 1.125rem;
+    font-weight: 600;
     margin-bottom: var(--spacing-lg);
     color: var(--bauhaus-blue);
-    @include breakpoint("md") {
-      font-size: 1.5rem;
-    }
   }
 
   strong {
     font-weight: 700;
-    background: linear-gradient(120deg, transparent 60%, var(--bauhaus-yellow) 60%);
-    background-size: 100% 40%;
-    background-position: 0 90%;
-    background-repeat: no-repeat;
   }
 
   a {
@@ -143,8 +144,7 @@
     color: var(--bauhaus-blue);
     @media (hover: hover) {
       &:hover {
-        background: var(--bauhaus-blue);
-        color: white;
+        color: var(--bauhaus-black);
       }
     }
   }
@@ -153,22 +153,12 @@
     font-size: 1.75rem;
     margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-md);
-    padding-left: 0;
-    border-left: none;
-    position: relative;
-    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--line);
+    display: block;
 
     @include breakpoint("md") {
-      font-size: 2rem;
-    }
-
-    &::after {
-      content: '';
-      display: block;
-      width: 50px;
-      height: 4px;
-      background: var(--bauhaus-red);
-      margin-top: 10px;
+      font-size: 1.875rem;
     }
   }
 }
@@ -176,43 +166,33 @@
 .divider {
   border: 0;
   height: 1px;
-  background: var(--bauhaus-black);
+  background: var(--line);
   margin: var(--spacing-xl) 0;
-  opacity: 0.2;
 }
 
 .bio-footer {
-  margin-top: var(--spacing-xl);
-  text-align: center;
-  padding-top: var(--spacing-lg);
-  border-top: var(--border-thick);
+  max-width: 68ch;
+  margin: 3rem auto 0;
+  text-align: left;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
 
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: var(--spacing-sm);
     @include breakpoint("md") {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
 
   .email-section {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: var(--spacing-lg);
-    @include breakpoint("md") {
-      font-size: 1.5rem;
-    }
   }
 
   .email-link {
     font-weight: 700;
-    color: var(--bauhaus-black);
-    border-bottom: 3px solid var(--bauhaus-yellow);
-
-    @media (hover: hover) {
-      &:hover {
-        background: var(--bauhaus-yellow);
-      }
-    }
+    color: var(--bauhaus-blue);
   }
 
   .jump-links {
@@ -222,20 +202,17 @@
     margin-top: var(--spacing-lg);
 
     a {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       color: var(--bauhaus-black);
-      transition: transform 0.2s;
       border: none;
 
       @include breakpoint("md") {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
 
       @media (hover: hover) {
         &:hover {
-          transform: scale(1.2);
-          color: var(--bauhaus-red);
-          background: transparent;
+          color: var(--bauhaus-blue);
         }
       }
     }

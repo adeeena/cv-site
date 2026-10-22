@@ -4,56 +4,46 @@
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2rem;
-  gap: 1rem;
+  margin: 1.5rem 0;
+  gap: 0.75rem;
 
   a {
-    border: 2px solid var(--bauhaus-black);
+    border: 1px solid var(--bauhaus-black);
+    border-radius: 2px;
     color: var(--bauhaus-white);
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: none;
     font-weight: 700;
-    transition: all 0.2s;
-    box-shadow: 4px 4px 0 var(--bauhaus-black);
-    margin-right: 0; /* Override */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    box-shadow: none;
+    margin-right: 0;
 
     &:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0 var(--bauhaus-black);
+      background: var(--bauhaus-blue);
+      border-color: var(--bauhaus-blue);
     }
 
     &:active {
-        transform: translate(0, 0);
-        box-shadow: 2px 2px 0 var(--bauhaus-black);
+      transform: none;
     }
   }
 
-  .block-button, .pdf {
-    background: var(--bauhaus-blue);
-
-    &:hover {
-        background: var(--bauhaus-white);
-        color: var(--bauhaus-blue);
-    }
-  }
-
+  .block-button, .pdf,
   .block-other-button, .email {
-    background: var(--bauhaus-red);
-
-    &:hover {
-        background: var(--bauhaus-white);
-        color: var(--bauhaus-red);
-    }
+    background: var(--bauhaus-black);
   }
 }
 
 .content {
-  /* REMOVED margin-top: 4rem; */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
 
   .showcase {
-    margin: 0 -3rem 5rem;
+    margin: 0 0 3rem;
     text-align: center;
 
     .item {
@@ -63,37 +53,35 @@
         display: block;
       }
     }
-    div {
+    .metromap-banner {
       background-size: cover;
-      height: 50vh;
-      border-top: 3px solid var(--bauhaus-black);
-      border-bottom: 3px solid var(--bauhaus-black);
+      background-position: center;
+      height: min(50vh, 520px);
+      border-block: 1px solid var(--line);
     }
   }
 
   .introduction {
-    margin-top: 2rem;
+    margin: 1.5rem auto;
     color: var(--bauhaus-black);
     font-size: 1.1rem;
     line-height: 1.6;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 68ch;
   }
 
   h1 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     /* REMOVED margin-top: 4rem; */
     margin-bottom: 2rem; /* Added bottom margin for spacing */
     text-transform: uppercase;
     text-align: center;
-    border-bottom: 5px solid var(--bauhaus-yellow);
-    display: table; /* To fit content width */
+    border-bottom: 1px solid var(--line);
+    display: table;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem 0.5rem;
+    padding: 0 0 0.75rem;
   }
 
   .jump-links {
@@ -104,11 +92,11 @@
     justify-content: center;
 
     a {
-      color: var(--bauhaus-black);
-      transition: color 0.2s;
+      color: var(--bauhaus-blue);
+      transition: color 0.2s ease;
 
       &:hover {
-          color: var(--bauhaus-red);
+        color: var(--bauhaus-black);
       }
     }
   }
@@ -116,62 +104,14 @@
 
 @media screen and (max-width: 600px) {
   .content {
-    padding: 0;
-
-    .selfie {
-      img {
-        width: 100%;
-        border: 2px solid var(--bauhaus-black);
-      }
-    }
+    padding: 0 1rem 3rem;
 
     .buttons {
-      display: grid;
-      gap: 1rem;
+      flex-direction: column;
 
       a {
         display: block;
         text-align: center;
-        margin: 0;
-      }
-    }
-
-    .showcase {
-        margin: 0 -1rem 3rem;
-    }
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1000px) {
-  .content {
-    padding: 0;
-
-    .selfie {
-      img {
-        max-height: 40vw;
-        border: 2px solid var(--bauhaus-black);
-        box-shadow: 8px 8px 0 var(--bauhaus-black);
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1001px) {
-  ::ng-deep .navigation, ::ng-deep .introduction {
-    padding: 0 4rem;
-  }
-
-  .content {
-    padding: 0;
-
-    .selfie {
-      text-align: center;
-      margin-top: 2rem;
-
-      img {
-        max-height: 50vh;
-        border: 3px solid var(--bauhaus-black);
-        box-shadow: 12px 12px 0 var(--bauhaus-black);
       }
     }
   }
